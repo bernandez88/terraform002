@@ -4,10 +4,16 @@ variable "subscription_name" {
     description = "Subscription Name for deployment"
 }
 
+variable "resource_group_name" {
+  type = string
+  default = ""
+  description = "(Optional) Resource group contents. Keep it blank for the naming logic to pick"
+}
+
 variable "app_service_name" {
     type        = string
     default     = ""
-    description = "(Optional) Resource group contents. Keep it blank for the naming logic to pick"
+    description = "(Optional) App Service name. Keep it blank for the naming logic to pick"
 }
 
 variable "location" {
