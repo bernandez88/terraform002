@@ -32,7 +32,7 @@ resource "azurerm_resource_group" "resource_group" {
   tags      = var.tags
 }
 
-resource "azure_storage_share" "storage_share" {
+resource "azurerm_storage_share" "storage_share" {
   name                  = local.app_service_name
   storage_account_name  = data.azurerm_storage_account.storage_account.name
 }
