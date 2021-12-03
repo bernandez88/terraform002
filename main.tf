@@ -18,7 +18,7 @@ provider "azurerm" {
 }
 
 resource "random_string" "suffix" {
-  length      = 5
+  length      = 3
   lower       = true
   number      = true
   min_numeric = 1
