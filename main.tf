@@ -1,3 +1,22 @@
+terraform {
+    required_providers {
+        azurerm = {
+        source = "hashicorp/azurerm"
+        version = "~> 2.65"
+        }
+    }
+    backend "remote" {
+        organization = "t001"
+        workspaces {
+            name = "terraform002"
+        }
+    }   
+}
+
+provider "azurerm" {
+  features {}
+}
+
 resource "random_string" "suffix" {
   length      = 5
   lower       = true
